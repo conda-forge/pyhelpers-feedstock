@@ -13,7 +13,7 @@ source:
   sha256: 7a1c2982363bdaaa2fc557c7ce6b47eeda501ccf0bfe28a8db31a38a6db90740
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -43,9 +43,16 @@ tests:
 
 about:
   summary: An open-source toolkit for facilitating Python users' data manipulation tasks.
+  description: |
+    PyHelpers is an open-source Python package designed to streamline data (pre-)processing and manipulation tasks. It accommodates a wide range of functions and classes grounded in practical applications, making common data operations more accessible and efficient. This toolkit is particularly useful for Python learners, researchers and data scientists seeking to enhance their workflows. 
+    
+    The package supports handling various data types, such as geographical and textual data, allowing for flexibility for diverse data processing needs. It also simplifies data input and output operations by offering functionalities for managing many different file-like objects. In addition, PyHelpers facilitates communication with relational databases, such as PostgreSQL and Microsoft SQL Server. This capability greatly smooths data integration with database systems through efficient data storage and retrieval.
+    
+    With its comprehensive suite of practical tools, PyHelpers simplifies complex data processing tasks and boosts productivity. It is ready to serve as an essential resource for effective data manipulation, management and analysis for anyone working with data in Python.
   license: MIT
   license_file: LICENSE
   homepage: https://github.com/mikeqfu/pyhelpers
+  repository: https://github.com/mikeqfu/pyhelpers
   documentation: https://pyhelpers.readthedocs.io/en/latest/
 
 extra:
