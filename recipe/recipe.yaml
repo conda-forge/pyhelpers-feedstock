@@ -1,19 +1,20 @@
 schema_version: 1
 
 context:
-  version: "2.5.2"
+  name: pyhelpers
+  version: "2.5.3"
   python_min: "3.12"
 
 package:
-  name: pyhelpers
+  name: ${{ name }}
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/p/pyhelpers/pyhelpers-${{ version }}.tar.gz
-  sha256: 7a1c2982363bdaaa2fc557c7ce6b47eeda501ccf0bfe28a8db31a38a6db90740
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
+  sha256: 4325677da2f914c6586fd2e794bc763786d5c00b1976eacf040b1f171bd044ae
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
